@@ -1,0 +1,63 @@
+.circles {
+    height: 20vmin;
+    width: 20vmin;
+    position: absolute;
+    margin: 0 auto;
+    top: 85%;
+    left: 85%;
+    transform: translate3D(-50%, -50%, 0);
+}
+.circle {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 200% 100% 100% 124%/125% 120% 127% 125%;
+}
+.circle:nth-child(1) {
+    transform-origin: 49.7% 50%;
+    animation: spin1 6s linear infinite;
+    border: 5px solid #ee7756;
+}
+.circle:nth-child(2) {
+    transform-origin: 50% 50.3%;
+    animation: spin2 6s linear infinite;
+    border: 2px solid #ee7756;
+}
+.circle:nth-child(3) {
+    transform-origin: 50.3% 50%;
+    animation: spin3 6s linear infinite;
+    border: 2px solid #ee7756;
+}
+@keyframes spin1 {
+    0% {
+        transform: rotate(0);
+        border-radius: 200% 100% 100% 124%/125% 120% 127% 125%;
+        width: 100%;
+   }
+    50% {
+        border-radius: 200% 130% 200% 94%/125% 120% 127% 125%;
+        width: 70%;
+   }
+    100% {
+        transform: rotate(100deg);
+        border-radius: 200% 100% 100% 124%/125% 120% 127% 125%;
+        width: 100%;
+   }
+}
+@keyframes spin2 {
+    0% {
+        transform: rotate(-144deg);
+   }
+    100% {
+        transform: rotate(216deg);
+   }
+}
+@keyframes spin3 {
+    0% {
+        transform: rotate(216deg);
+   }
+    100% {
+        transform: rotate(-144deg);
+   }
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- save map -->
+    <node pkg="map_server" name="map_saver" type="map_saver" args="--occ 90 --free 10 -f '$(find oscar_navigation)'/maps/oscar_map map:=/map"/>
+</launch>

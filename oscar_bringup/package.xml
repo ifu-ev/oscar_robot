@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>oscar_bringup</name>
+  <version>1.0.0</version>
+  <description>The oscar_bringup package</description>
+
+  <maintainer email="tobias.bruenker@ifu.rwth-aachen.de">Tobias Brünker</maintainer>
+
+  <license>TODO</license>
+
+  <url type="website">https://ifu.rwth-aachen.de/</url>
+
+  <author email="anna.meer@ifu.rwth-aachen.de">Anna Meer</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export></export>
+  
+</package>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- launch robot -->
+  <include file="$(find oscar_bringup)/launch/robot.launch" />
+
+  <!-- launch ps4 controller -->
+  <include file="$(find create_bringup)/launch/joy_teleop.launch">
+    <arg name="teleop_config" default="$(find oscar_bringup)/config/ps4_controller.yaml" />
+  </include>
+
+</launch>

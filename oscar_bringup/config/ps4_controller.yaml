@@ -1,0 +1,19 @@
+# ps4 wireless controller
+teleop:
+  piloting:
+    type: topic
+    message_type: "geometry_msgs/Twist"
+    topic_name: cmd_vel
+    deadman_buttons: []  # No deadman buttons
+    axis_mappings:
+      -
+        axis: 4  # Right thumb (up/down)
+        target: linear.x
+        scale: 1
+        offset: 0.0
+      -
+        axis: 3  # Right thumb stick (left/right)
+        target: angular.z
+        scale: 1
+        offset: 0.0
+   

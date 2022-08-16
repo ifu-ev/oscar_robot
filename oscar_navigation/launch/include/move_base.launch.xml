@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Arguments -->
+  <arg name="cmd_vel_topic" default="/cmd_vel" />
+  <arg name="odom_topic" default="/odom" />
+
+  <!-- move_base -->
+  <node name="move_base" pkg="move_base" type="move_base" respawn="true" output="screen">
+    <rosparam file="$(find oscar_navigation)/param/TEB/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find oscar_navigation)/param/TEB/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find oscar_navigation)/param/TEB/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find oscar_navigation)/param/TEB/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find oscar_navigation)/param/TEB/teb_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find oscar_navigation)/param/TEB/costmap_converter_params.yaml" command="load" />
+    <rosparam file="$(find oscar_navigation)/param/TEB/global_planner_params.yaml" command="load" />
+
+    <remap from="cmd_vel" to="$(arg cmd_vel_topic)"/>
+    <remap from="odom" to="$(arg odom_topic)"/>
+
+    <param name="base_global_planner" value="global_planner/GlobalPlanner" />
+		<param name="planner_frequency" value="1.0" />
+		<param name="planner_patience" value="5.0" />
+
+		<param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
+		<param name="controller_frequency" value="15.0" />
+		<param name="controller_patience" value="10.0" />
+  </node>
+
+</launch>

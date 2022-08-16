@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+  <name>oscar_description</name>
+  <version>1.0.0</version>
+  <description>oscar robot description package</description>
+
+  <maintainer email="christoph.henke@ima-ifu.rwth-aachen.de">Christoph Henke</maintainer>
+  <author email="christoph.henke@ima-ifu.rwth-aachen.de">Christoph Henke</author>
+  
+  <license>BSD</license>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>urdf</build_depend>
+  <build_depend>roslaunch</build_depend>
+
+  <run_depend>joint_state_publisher</run_depend>
+  <run_depend>urdf</run_depend>
+
+  <export>
+  </export>
+</package>

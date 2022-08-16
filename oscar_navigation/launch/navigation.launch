@@ -1,0 +1,11 @@
+<launch>
+  <!-- Map server -->
+  <include file="$(find oscar_navigation)/launch/include/map_server.launch.xml"/>
+
+  <!-- AMCL -->
+  <include file="$(find oscar_navigation)/launch/include/amcl.launch.xml"/>
+
+  <!-- move_base -->
+  <include file="$(find oscar_navigation)/launch/include/move_base.launch.xml"/>
+
+</launch>

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<robot name="oscar" xmlns:xacro="http://ros.org/wiki/xacro">
+  <link name="base_link_oscar">
+    <visual>
+      <origin rpy="0 0 1.57" xyz="0 0 0.86" />
+      <geometry>
+        <mesh filename="package://oscar_description/meshes/oscar.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="base_link_oscar_to_create" type="fixed">
+    <parent link="base_link"/>
+    <child link="base_link_oscar"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+</robot>

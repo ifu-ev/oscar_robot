@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- launch rviz -->
+    <node name= "rviz" pkg="rviz" type="rviz" args="-d $(find oscar_bringup)/rviz/navigation.rviz" />
+    
+</launch>

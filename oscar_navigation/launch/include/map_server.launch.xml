@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Arguments -->
+  <arg name="map_file" default="$(find oscar_navigation)/maps/oscar_map.yaml"/>
+
+  <!-- Map server -->
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+
+</launch>

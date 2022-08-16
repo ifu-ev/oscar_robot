@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+       xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+       xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+       xmlns:xacro="http://ros.org/wiki/xacro"
+       name="roomba_sick" >
+  
+  <!-- oscar-base -->
+  <xacro:include filename="$(find oscar_description)/urdf/oscar_base/create_2.urdf.xacro" />
+  <xacro:include filename="$(find oscar_description)/urdf/oscar_base/oscar.urdf.xacro" />
+  
+  <!-- rplidar -->
+  <xacro:include filename="$(find oscar_description)/urdf/sensors/rplidar.urdf.xacro" />
+  <xacro:rplidar name="rplidar" parent="base_link" ros_topic="scan" update_rate="5" ray_count="1040" min_angle="0" max_angle="360">
+    <origin xyz="0.16 0 0.28" rpy="0 0 3.14"/>
+  </xacro:rplidar>  
+ 
+
+ <xacro:include filename="$(find oscar_description)/urdf/sensors/_d435.urdf.xacro"/>
+  <xacro:sensor_d435 parent="base_link" use_nominal_extrinsics="false">
+    <origin xyz="0.16 0 0.45" rpy="0 0 0"/>
+  </xacro:sensor_d435>
+  
+</robot>

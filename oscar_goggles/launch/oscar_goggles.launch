@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="camera_device" default="0" />
+    <arg name="visualize" default="false" />
+    <arg name="add_brightness" default="50" />
+
+	<node pkg="oscar_goggles" name="oscar_goggles" type="facedetection.py" output="screen">
+		<param name="face_cascade" value="$(find oscar_goggles)/data/lbpcascade_frontalface_improved.xml" />
+		<param name="camera_device" value="$(arg camera_device)" />
+        <param name="visualize" value="$(arg visualize)" />
+        <param name="add_brightness" value="$(arg add_brightness)" />
+	</node>
+
+	<include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" /> 
+	<node pkg="oscar_goggles" name="webpage" type="web.sh" />
+
+</launch>

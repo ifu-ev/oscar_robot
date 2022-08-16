@@ -1,0 +1,8 @@
+<launch>
+  <!-- GMapping -->
+  <include file="$(find oscar_navigation)/launch/include/gmapping.launch.xml"/>
+
+  <!-- move_base -->
+  <include file="$(find oscar_navigation)/launch/include/move_base.launch.xml"/>
+
+</launch>

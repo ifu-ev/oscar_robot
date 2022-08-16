@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- launch robot -->
+  <include file="$(find oscar_bringup)/launch/robot.launch" />
+
+  <!-- launch move base -->
+  <include file="$(find oscar_navigation)/launch/mapping.launch"/>
+  
+</launch>
